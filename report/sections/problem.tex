@@ -1,0 +1,54 @@
+Quadruped robots are very complex to make. They are complex in a mechanical
+design as well as in control algorithms. The goal of this project is to
+implement walking algorithms for a quadruped robot. My focus will be on
+generating smooth trajectories for the robot's legs using splines.
+Jan Górski will be implementing the Trajectory Generation using reinforcement
+learning approach. In the end, we will compare both methods and evaluate.
+Both algorithm will be tested in a Unitree Mujoco simulation environment with
+a Unitree GO2 robot model. Both algorithm should be able to walk forward on 
+a flat and obstacle terrain.
+
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.45\textwidth]{imgs/mujacoo_sim.png}
+    \caption{Unitree GO2 quadruped robot in the Mujoco simulation.}
+    \label{fig:quadruped-go2}
+\end{figure}
+
+
+\subsection{Mujoco simulation enviroment}
+Mujoco is a physics engine that is widely used for simulating robots maintained by 
+DeepMind. Initial paper describing Mujoco \cite{mujoco} was published in 2012. 
+It is known for its speed and accuracy in simulating complex robotic systems.
+
+Unitree Robotics provides a Mujoco simulation environment for their GO2 robot
+\cite{unitree-mujoco-github}. This environment includes a detailed model of the
+robot, as well as various terrains and obstacles for testing walking algorithms.
+Unitree provides exaple of Sim to Real transfer. That makes this project "testable"
+in real world after the simulation phase.
+
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.45\textwidth]{imgs/robot_in_terrain.png}
+    \caption{Unitree GO2 robot and rough terrain in Mujoco simulation.}
+    \label{fig:mujacoo-sim-terrain}
+\end{figure}
+
+
+\subsection{Unitree GO2 Robot}
+The Unitree GO2 robot \cite{unitree-go2} is a quadruped robot designed for research
+and development in robotics. It features a lightweight design, high mobility, and
+advanced sensors for navigation and obstacle avoidance. The robot is equipped with
+12 degrees of freedom, allowing for complex movements and maneuvers. 
+This robot is widely used in research due to its affordability and versatility. 
+Cost for the robot for 1st of December 2025 is 1600 USD.
+
+Unitree GO2 robot weighs 15kg and can output a maximum of 3kW of power. Each 
+motor in a leg can provide up to 45Nm of torque. Each version of robot is eqquipped
+in 8 core CPU and educational version could be equipped in Nvida Jetson Orin SBC. 
+These parameters make the GO2 robot very capable platform for research in
+quadruped locomotion. In my approach to control the robot high computing power
+is not required as the trajectory generation could be precomputed and stored
+in a look-up table.

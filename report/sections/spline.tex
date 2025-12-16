@@ -1,0 +1,96 @@
+\subsection{Gait phase generator}
+The gait phase generator is responsible for coordinating the movements of the 
+robot's legs during walking. It defines the possition of each leg in the gait cycle,
+from given spline trajectory. The gait phase generator uses a time-based approach to determine
+the phase of each leg, ensuring that the legs move in a coordinated manner.
+Algorithm uses the following equation to calculate the phase position of each leg
+\ref{phase-equation}:
+
+\begin{equation}
+\text{cycle\_pos} = \left( \frac{t}{T_{\text{cycle}}} + \text{offset} \right) \bmod 1
+\label{phase-equation}
+\end{equation}
+Where \( t \) is the current time, \( T_{\text{cycle}} \) is the duration of a full gait cycle,
+and \( \text{offset} \) is a phase offset for each leg to ensure proper
+
+Current offset sequencing is in Table \ref{offset-table}. This sequencing is used by 
+multipla animals such as dogs or horses while trotting. 
+
+\begin{table}[h]
+\centering
+\caption{Gait phase offsets for each leg.}
+\label{offset-table}
+\begin{tabular}{c c}
+\hline
+\textbf{Leg} & \textbf{Phase Offset} \\
+\hline
+Front Right & 0.0 \\
+Rear Left & 0.0 \\
+Front Left & 0.5 \\
+Rear Right & 0.5 \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+
+\subsection{Spline Trajectory Generation}
+The spline trajectory generation module is responsible for creating actual foot 
+trajectories. It uses cubic splines to interpolate between key waypoints, ensuring smooth
+and continuous motion. The spline generation process involves defining control points
+for each leg's trajectory and then using these points to create cubic spline functions.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.45\textwidth]{imgs/leg_swing.png}
+    \caption{Cubic spline trajectory for a leg swing motion.}
+    \label{fig:spline-trajectory}
+\end{figure}
+
+Current approach uses 3 predefined waypoints for each leg's trajectory. The waypoints 
+are defined as follows:
+\begin{itemize}
+    \item Start Point: (0, 0, 0) - The initial position of the foot.
+    \item Mid Point: (Step Lenght/2, 0, Step Height) - The highest point of the swing phase.
+    \item End Point: (Step Lenght, 0, 0) - The final position of the foot.
+\end{itemize}
+
+Current version uses these settings for the step parameters:
+\begin{itemize}
+    \item Step Lenght = 0.22
+    \item Step Height = 0.12
+    \item Cycle Time = 0.6      --- time of full gait cycle
+    \item Duty = 0.6     --- portion of the cycle when the foot is on the ground
+\end{itemize}
+
+These settings can be tweeked to achieve different walking styles and speeds. 
+For example increasing the step height could help the robot to walk on uneven terrain.
+
+\subsection{Different trajectory}
+
+One example to tune the trajectory was to use 4 waypoints to flatten the top of the
+spline curve. This was done to reduce the acceleration at the top of the swing phase,
+which could lead to a more stable walking motion. Trajectory is shown in figure
+\ref{fig:fast-spline-trajectory}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.45\textwidth]{imgs/fast_walk_trajectory.png}
+    \caption{Fast walking cubic spline trajectory for a leg swing motion.}
+    \label{fig:fast-spline-trajectory}
+\end{figure}
+
+Additionaly I changed the step parameters to achieve a faster walking speed:
+Video of the robot walking with this trajectory can be found at
+\url{https://youtu.be/nRwTH8aU0jQ}
+
+\subsection{Spline improvements}
+
+For this day I focused on implementing the basic spline trajectory generation and gait phase
+coordination. However, there are several potential improvements that could be made to enhance
+the system. The major one would be to implement a system to dynamically adjust the step parameters
+based on the robot's speed and terrain. This could involve using sensors to detect the ground
+and adjust the step height and length accordingly. Additionally, implementing more advanced gait patterns,
+such as walking, trotting, and galloping, could provide more versatility to the robot's movement capabilities. Future work could also explore the use of machine learning techniques to optimize the gait
+patterns based on feedback from the robot's performance. 

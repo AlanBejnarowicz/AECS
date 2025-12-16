@@ -1,0 +1,51 @@
+Algorithm ended up beeing very successful. Robot is able to walk
+smoothly on a flat terrain. What was more suprising is that robot is also able to
+walk on an uneven terrain with small obstacles. The PID balancing controller
+helped a lot with maintaining stability during walking.
+
+Another practical implementation could be robots walking in a theme parks
+by tweeking the gait parameters it is easy to achieve funny walking styles.
+Overall, the spline-based trajectory generation approach proved to be
+effective for controlling the quadruped robot's walking gait in simulation.
+
+Robots like that arleady exists in a Disney theme park, from available information
+their approach uses reinforcement learning to train the walking gait.
+Figure~\ref{fig:disney-bipedal} shows a bipedal robot. Same approach is implemented
+by Jan Górski.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.45\textwidth]{imgs/disney_bipedal.png}
+    \caption{Disney's Imagineering bipedal robot. \cite{disney-control-bipedal}}
+    \label{fig:disney-bipedal}
+\end{figure}
+
+
+
+\subsection{Comparision to between Splines and RL algorithms}
+Both spline-based trajectory generation and reinforcement learning (RL) approaches
+have their own advantages and disadvantages when it comes to controlling quadruped
+robot locomotion. Key difference is that spline-based approach is simpler to implement
+and requires computing power of medium size calculator while RL approach requires
+a lot of computing power to train the model and then run model in real-time. Despite 
+this difference spline approach can be expanded and achieve similar results to RL approach.
+
+\subsection{Reinforcement Learning [Jan Górski]}
+This method involves training a neural network to learn optimal walking gaits
+through trial and error. The robot receives rewards for successful movements and
+penalties for failures, allowing it to gradually improve its performance over time.
+To train the RL model Jan used SDU UCloud computing resources. Even with dedicated
+GPU it took several hours to train the model. Researches from ETH Zürich 
+\cite{deep-tracking-control} have demonstrated that RL approach can achieve
+impressive results in quadruped locomotion, including walking on very challenging terrain. 
+A video demonstrating their results can be found at \cite{deep-tracking-control-video}. 
+
+\subsection{Spline foot trajectory}
+My approach is based on generating smooth foot trajectories using cubic splines.
+This method does not require high computing power nor require training. However,
+witch a proper tuning and additional modules witch modifies the foot trajectory 
+in real-time it can achieve similar results to RL approach. Researchers from Brazil
+\cite{pedro2024quadruped} have demonstrated that spline-based trajectory generation
+can be effective for controlling quadruped robots, including walking on uneven terrain.
+Great advatange of spline approach is that it is predictable and stable. It is 
+just a math function that could be analyzed and prooved to be stable. 

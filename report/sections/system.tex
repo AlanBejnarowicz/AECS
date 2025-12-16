@@ -1,0 +1,24 @@
+
+Whole control system diagram is shown in Fig.~\ref{fig:control-system}. Whole code is 
+about 500 lines of python code and uses simple math. Whole algorithm runs in real-time
+in the Mujoco simulation environment and easyly could be implemented on a real robot 
+even on a microcontroller with limited computing power.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.45\textwidth]{imgs/controller_diagram.png}
+    \caption{Whole control system diagram including phase generation, spline trajectory,
+    inverse kinematics, and PID balancing controller.}
+    \label{fig:control-system}
+\end{figure}
+
+
+Phase generation module creates phase offsets for each leg to ensure proper gait timing.
+Then these phases are used by the spline trajectory generation module to update foot
+positions in real-time. The inverse kinematics module then converts these foot positions
+into joint angles for the robot's legs. Finally, the PID balancing controller adjusts the
+height of each leg to maintain the robot's balance based on its current orientation.
+
+
+Right now the system is only capable of walking in a straight line. Future should include
+the ability to turn and change directions and more advanced gaits.

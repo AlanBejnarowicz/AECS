@@ -1,0 +1,10 @@
+To make robot more stable during walking I implemented a PID controller
+to adjust the body orientation based on IMU data from the simulation. The controller
+calculates the error between the desired and actual orientation and computes
+the necessary adjustments witch are then applied to legs Z axis positions. 
+That simple way to help maintain balance during walking and reduce body
+tilting happend to be very effective.
+
+To balance in both pitch and roll axes I implemented two separate PD controllers.
+The PD parameters were tuned through trial and error to achieve optimal performance.
+Whole control loop runs at DT = 0.002s. 

@@ -1,0 +1,120 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+
+\begin{document}
+
+\title{Quadruped walking algorithms\\ Spline Approach for Trajectory Generation}
+
+\author{\IEEEauthorblockN{Group Member: Jan Górski}
+\IEEEauthorblockA{jagor24@student.sdu.dk}
+\and
+\IEEEauthorblockN{Author: Alan Bejnarowicz}
+\IEEEauthorblockA{albej24@student.sdu.dk}
+}
+
+\maketitle
+
+
+\begin{IEEEkeywords}
+\end{IEEEkeywords}
+\textit{Qdruped robots, walking algorithms, spline interpolation, trajectory generation, smooth motion planning}
+
+\section{Introduction}
+\input{sections/introduction.tex}
+
+\section{Description of the problem}
+\input{sections/problem.tex}
+
+\section{Problems to be solved}
+\input{sections/to_be_solve.tex}
+
+\section{Inverse Kinematics}
+\input{sections/IK.tex}
+
+
+\section{Phase and Spline Trajectory Generation}
+\input{sections/spline.tex}
+
+
+\section{PID balancing controller}
+\input{sections/balancing.tex}
+
+\section{Control system}
+\input{sections/system.tex}
+
+\section{Results}
+\input{sections/results.tex}
+
+
+\section {All YouTube videos links}
+YouTube videos demonstrating the results can be found here:
+\begin{itemize}
+    \item Fast walking: \href{https://youtu.be/nRwTH8aU0jQ}{https://youtu.be/nRwTH8aU0jQ}
+    \item Heavy terrain: \href{https://youtu.be/4OVWzleJ\_GU}{https://youtu.be/4OVWzleJ\_GU}
+    \item No PID funny setup walking: \href{https://www.youtube.com/watch?v=eI8ZH1-Hwkk}{https://www.youtube.com/watch?v=eI8ZH1-Hwkk}
+    \item Flat terrain no PID balancing: \href{https://youtu.be/eI8ZH1-Hwkk}{https://youtu.be/eI8ZH1-Hwkk}
+\end{itemize}
+
+
+\begin{thebibliography}{00}
+\bibitem{unitree-mujoco-github}
+Unitree Robotics, "unitree\_mujoco" GitHub repository.
+Available: \url{https://github.com/unitreerobotics/unitree_mujoco}. 
+Accessed: Dec. 1, 2025.
+
+\bibitem{unitree-go2}
+Unitree Robotics, "Unitree GO2 Robot" Product Page.
+Available: \url{https://shop.unitree.com/products/unitree-go2?srsltid=AfmBOooo_NzRU6B7Nf0OCNzLnS0lI8Q6H5uuD0nauSsT0dyTkfN_iFYb}. 
+Accessed: Dec. 1, 2025.
+
+\bibitem{go2_inverse_kinematics}
+Unitree Go2 Inverse Kinematics Article.
+Available: \url{https://observablehq.com/@christophe-yamahata/inverse-kinematics-go2-robot}. 
+Accessed: Dec. 1, 2025.
+
+
+\bibitem{disney-imaginiering-bipedal-robots} Disney Imagineering Bipedal Robots. Available:
+\url{https://www.youtube.com/watch?v=-cfIm06tcfA}.
+Accessed: Dec. 1, 2025.
+
+\bibitem{mujoco}E. Todorov, T. Erez and Y. Tassa, "MuJoCo: A physics engine for model-based control," 2012 IEEE/RSJ International Conference on Intelligent Robots and Systems, Vilamoura-Algarve, Portugal, 2012, pp. 5026-5033, doi: 10.1109/IROS.2012.6386109.
+keywords: {Engines;Optimization;Computational modeling;Heuristic algorithms;Dynamics;Mathematical model},
+
+\bibitem{unitree-mujoco-github} Unitree Robotics, "unitree\_mujoco" GitHub repository.
+\url{https://github.com/unitreerobotics/unitree_mujoco}
+Accessed: Dec. 1, 2025.\
+
+\bibitem{disney-control-bipedal} Design and Control of a Bipedal Robotic Character 
+\url{https://la.disneyresearch.com/publication/design-and-control-of-a-bipedal-robotic-character/}
+Accessed: Dec. 1, 2025.
+
+\bibitem{deep-tracking-control} DTC: Deep Tracking Control, ETH Zürich
+\url{https://www.science.org/doi/10.1126/scirobotics.adh5401}
+
+\bibitem{deep-tracking-control-video} Video of DTC: Deep Tracking Control, ETH Zürich
+\url{https://www.youtube.com/watch?v=nipH-yl8lR0}
+
+
+\bibitem{pedro2024quadruped}
+G.~D.~G. Pedro, G.~Bermudez, V.~S. Medeiros, H.~J.~d.~C. Neto, L.~G.~D.~d. Barros, G.~Pessin, M.~Becker, G.~M. Freitas, and T.~Boaventura, "Quadruped Robot Control: An Approach Using Body Planar Motion Control, Legs Impedance Control and B\'ezier Curves," Sensors, vol. 24, art. no. 3825, 2024. doi: 10.3390/s24123825. [Online]. Available: \url{https://doi.org/10.3390/s24123825}
+
+\end{thebibliography}
+
+
+
+
+\end{document}

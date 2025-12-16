@@ -1,0 +1,15 @@
+First major problem I needed to solve is to implementation of inverse kinematics 
+for the Unitree Go2 robot. Very helpful resource was an online article explaining the
+inverse kinematics for this specific robot \cite{go2_inverse_kinematics}. The article 
+provided the dimmensions of the robot's leg segments. Then I using geometric approach
+I derived the equations to calculate the joint angles based on the desired foot position
+in the robot's leg coordinate frame. 
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.45\textwidth]{imgs/go2_leg_dims.png}
+    \caption{Unitree GO2 leg dimensions used for inverse kinematics calculations.}
+    \label{fig:go2-leg-dim}
+\end{figure}
+
+Implementation of the inverse kinematics is in the file \texttt{GO2\_IK.py}.
