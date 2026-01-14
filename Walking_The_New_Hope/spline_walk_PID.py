@@ -22,6 +22,14 @@ from GO2_IK import Go2LegIK
 from spline_gen import SplineGenerator
 from spline_gen import SplineGaitController
 
+from unitree_lowstate_imu_logger import UnitreeLowStateIMULogger
+from unitree_sdk2py.core.channel import (
+    ChannelFactoryInitialize,
+    ChannelPublisher,
+    ChannelSubscriber,
+)
+
+
 # ---------------------- constants / config ----------------------
 DT          = 0.002
 KP, KD      = 100.0, 2.0
@@ -235,6 +243,11 @@ def main():
     sub = ChannelSubscriber('rt/lowstate', LowState_)
     sub.Init()
 
+
+
+    logger = UnitreeLowStateIMULogger()
+
+
     ik = Go2LegIK(l_thigh=0.213, l_calf=0.213, hip_abd_sign=1.0, calf_sign=-1.0)
 
     # gait and spline setup
@@ -265,6 +278,10 @@ def main():
     crc = CRC()
     start_time = time.perf_counter()
 
+    lowstate = sub.Read()
+    print(dir(lowstate))
+
+
     try:
         while True:
             t0 = time.perf_counter()
@@ -276,6 +293,9 @@ def main():
             except Exception:
                 state = None
             curr_pos = get_current_motor_positions(state)
+
+            logger.log(state, t)
+
 
             # compute foot targets
             foot_targets = {}
@@ -322,6 +342,8 @@ def main():
     finally:
         cmd.crc = crc.Crc(cmd)
         pub.Write(cmd)
+        logger.close()
+
         print("Done, exiting.")
 
 if __name__ == '__main__':

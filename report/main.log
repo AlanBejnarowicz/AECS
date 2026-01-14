@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.10.2)  3 DEC 2025 21:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.10.2)  8 JAN 2026 23:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/alan/XiaofengProject/report/main.tex
-(/home/alan/XiaofengProject/report/main.tex
+**/home/alan/AECS(Xiaofeng)/report/main.tex
+(/home/alan/AECS(Xiaofeng)/report/main.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21> (./IEEEtran.cls
 Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
@@ -389,18 +389,18 @@ LaTeX Info: Redefining \nameref on input line 18.
 \openout3 = `main.out'.
 
  (./sections/introduction.tex
-<imgs/our_quadruped.jpg, id=80, 1495.5875pt x 996.72375pt>
+<imgs/our_quadruped.jpg, id=85, 1495.5875pt x 996.72375pt>
 File: imgs/our_quadruped.jpg Graphic file (type jpg)
 <use imgs/our_quadruped.jpg>
 Package pdftex.def Info: imgs/our_quadruped.jpg  used on input line 8.
 (pdftex.def)             Requested size: 232.19843pt x 154.73392pt.
 ) (./sections/problem.tex
-<imgs/mujacoo_sim.png, id=81, 2890.8pt x 1806.75pt>
+<imgs/mujacoo_sim.png, id=86, 2890.8pt x 1806.75pt>
 File: imgs/mujacoo_sim.png Graphic file (type png)
 <use imgs/mujacoo_sim.png>
 Package pdftex.def Info: imgs/mujacoo_sim.png  used on input line 14.
 (pdftex.def)             Requested size: 232.19843pt x 145.12189pt.
-<imgs/robot_in_terrain.png, id=85, 1566.85374pt x 1149.29375pt>
+<imgs/robot_in_terrain.png, id=90, 1566.85374pt x 1149.29375pt>
 File: imgs/robot_in_terrain.png Graphic file (type png)
 <use imgs/robot_in_terrain.png>
 Package pdftex.def Info: imgs/robot_in_terrain.png  used on input line 34.
@@ -417,7 +417,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 5.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )) (./sections/IK.tex
-<imgs/go2_leg_dims.png, id=104, 632.3625pt x 444.15938pt>
+<imgs/go2_leg_dims.png, id=109, 632.3625pt x 444.15938pt>
 File: imgs/go2_leg_dims.png Graphic file (type png)
 <use imgs/go2_leg_dims.png>
 Package pdftex.def Info: imgs/go2_leg_dims.png  used on input line 10.
@@ -426,13 +426,13 @@ LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 15
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )) (./sections/spline.tex
-<imgs/leg_swing.png, id=107, 884.30376pt x 811.03pt>
+<imgs/leg_swing.png, id=112, 884.30376pt x 811.03pt>
 File: imgs/leg_swing.png Graphic file (type png)
 <use imgs/leg_swing.png>
 Package pdftex.def Info: imgs/leg_swing.png  used on input line 46.
 (pdftex.def)             Requested size: 232.19843pt x 212.95425pt.
  [2 <./imgs/go2_leg_dims.png>]
-<imgs/fast_walk_trajectory.png, id=124, 695.59875pt x 682.55pt>
+<imgs/fast_walk_trajectory.png, id=129, 695.59875pt x 682.55pt>
 File: imgs/fast_walk_trajectory.png Graphic file (type png)
 <use imgs/fast_walk_trajectory.png>
 Package pdftex.def Info: imgs/fast_walk_trajectory.png  used on input line 79.
@@ -441,54 +441,100 @@ Package pdftex.def Info: imgs/fast_walk_trajectory.png  used on input line 79.
 Underfull \vbox (badness 3668) has occurred while \output is active []
 
  (./sections/balancing.tex) (./sections/system.tex
-<imgs/controller_diagram.png, id=127, 1556.81625pt x 547.04375pt>
+<imgs/controller_diagram.png, id=132, 1556.81625pt x 547.04375pt>
 File: imgs/controller_diagram.png Graphic file (type png)
 <use imgs/controller_diagram.png>
 Package pdftex.def Info: imgs/controller_diagram.png  used on input line 9.
 (pdftex.def)             Requested size: 232.19843pt x 81.58557pt.
 ) (./sections/results.tex [3 <./imgs/leg_swing.png> <./imgs/fast_walk_trajectory.png> <./imgs/controller_diagram.png>]
-<imgs/disney_bipedal.png, id=139, 937.5025pt x 940.51375pt>
+<imgs/disney_bipedal.png, id=144, 937.5025pt x 940.51375pt>
 File: imgs/disney_bipedal.png Graphic file (type png)
 <use imgs/disney_bipedal.png>
 Package pdftex.def Info: imgs/disney_bipedal.png  used on input line 18.
 (pdftex.def)             Requested size: 232.19843pt x 232.93214pt.
+<imgs/Jan_RL_scheme.png, id=148, 1169.36874pt x 615.29875pt>
+File: imgs/Jan_RL_scheme.png Graphic file (type png)
+<use imgs/Jan_RL_scheme.png>
+Package pdftex.def Info: imgs/Jan_RL_scheme.png  used on input line 46.
+(pdftex.def)             Requested size: 232.19843pt x 122.17502pt.
+<imgs/Gyro_Data.png, id=152, 1011.78pt x 604.2575pt>
+File: imgs/Gyro_Data.png Graphic file (type png)
+<use imgs/Gyro_Data.png>
+Package pdftex.def Info: imgs/Gyro_Data.png  used on input line 79.
+(pdftex.def)             Requested size: 232.19843pt x 138.67203pt.
+<imgs/ACC_data.png, id=153, 1004.75375pt x 607.26875pt>
+File: imgs/ACC_data.png Graphic file (type png)
+<use imgs/ACC_data.png>
+Package pdftex.def Info: imgs/ACC_data.png  used on input line 80.
+(pdftex.def)             Requested size: 232.19843pt x 140.33603pt.
+<imgs/Jan_Gyro.png, id=154, 1007.765pt x 607.26875pt>
+File: imgs/Jan_Gyro.png Graphic file (type png)
+<use imgs/Jan_Gyro.png>
+Package pdftex.def Info: imgs/Jan_Gyro.png  used on input line 87.
+(pdftex.def)             Requested size: 232.19843pt x 139.91905pt.
+<imgs/Jan_ACC.png, id=155, 1007.765pt x 607.26875pt>
+File: imgs/Jan_ACC.png Graphic file (type png)
+<use imgs/Jan_ACC.png>
+Package pdftex.def Info: imgs/Jan_ACC.png  used on input line 88.
+(pdftex.def)             Requested size: 232.19843pt x 139.91905pt.
+ [4 <./imgs/disney_bipedal.png> <./imgs/Jan_RL_scheme.png>]
+<imgs/Gyro_FFT.png, id=175, 2003.485pt x 809.0225pt>
+File: imgs/Gyro_FFT.png Graphic file (type png)
+<use imgs/Gyro_FFT.png>
+Package pdftex.def Info: imgs/Gyro_FFT.png  used on input line 109.
+(pdftex.def)             Requested size: 232.19843pt x 93.75778pt.
+<imgs/ACC_FFT.png, id=176, 2003.485pt x 809.0225pt>
+File: imgs/ACC_FFT.png Graphic file (type png)
+<use imgs/ACC_FFT.png>
+Package pdftex.def Info: imgs/ACC_FFT.png  used on input line 110.
+(pdftex.def)             Requested size: 232.19843pt x 93.75778pt.
+<imgs/Jan_GYRO_FFT.png, id=177, 2003.485pt x 801.99625pt>
+File: imgs/Jan_GYRO_FFT.png Graphic file (type png)
+<use imgs/Jan_GYRO_FFT.png>
+Package pdftex.def Info: imgs/Jan_GYRO_FFT.png  used on input line 118.
+(pdftex.def)             Requested size: 232.19843pt x 92.94351pt.
+<imgs/Jan_ACC_FFT.png, id=178, 2003.485pt x 801.99625pt>
+File: imgs/Jan_ACC_FFT.png Graphic file (type png)
+<use imgs/Jan_ACC_FFT.png>
+Package pdftex.def Info: imgs/Jan_ACC_FFT.png  used on input line 119.
+(pdftex.def)             Requested size: 232.19843pt x 92.94351pt.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 68--69
+Underfull \hbox (badness 10000) in paragraph at lines 73--74
 []\OT1/ptm/m/n/10 No PID funny setup walk-ing:
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 80--83
+[5 <./imgs/Gyro_Data.png> <./imgs/ACC_data.png> <./imgs/Jan_Gyro.png> <./imgs/Jan_ACC.png> <./imgs/Gyro_FFT.png> <./imgs/ACC_FFT.png> <./imgs/Jan_GYRO_FFT.png> <./imgs/Jan_ACC_FFT.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 85--88
 []$\OT1/ptm/m/n/8 https : / / shop . unitree . com / products / unitree-[]go2 ? srsltid = AfmBOooo[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--83
+Underfull \hbox (badness 10000) in paragraph at lines 85--88
 \OT1/ptm/m/n/8 NzRU6B7Nf0OCNzLnS0lI8Q6H5uuD0nauSsT0dyTkfN[]iFYb$[].
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--88
+Underfull \hbox (badness 10000) in paragraph at lines 90--93
 \OT1/ptm/m/n/8 com / @christophe-[]yamahata / inverse-[]kinematics-[]go2-[]robot$[]. Ac-cessed:
  []
 
 
-Underfull \hbox (badness 3271) in paragraph at lines 94--96
+Underfull \hbox (badness 3271) in paragraph at lines 99--101
 []\OT1/ptm/m/n/8 E. Todorov, T. Erez and Y. Tassa, "Mu-JoCo: A physics en-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 101--104
+Underfull \hbox (badness 10000) in paragraph at lines 106--109
 []\OT1/ptm/m/n/8 Design and Con-trol of a Bipedal Robotic
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 101--104
+Underfull \hbox (badness 10000) in paragraph at lines 106--109
 \OT1/ptm/m/n/8 Char-ac-ter []$https : / / la . disneyresearch . com / publication /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 101--104
+Underfull \hbox (badness 10000) in paragraph at lines 106--109
 \OT1/ptm/m/n/8 design-[]and-[]control-[]of-[]a-[]bipedal-[]robotic-[]character/$[] Ac-cessed: Dec.
  []
 
@@ -503,30 +549,32 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[4pdfTeX warning (ext4): destination with the same identifier (name{cite.unitree-mujoco-github}) has been already used, duplicate ignored
+[6pdfTeX warning (ext4): destination with the same identifier (name{cite.unitree-mujoco-github}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.120 \end{document}
-                     <./imgs/disney_bipedal.png>] (./main.aux)
+l.125 \end{document}
+                    
+
+] (./main.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 7D1649B8C0E8344AF175473512D85B22;3226.
+(rerunfilecheck)             Checksum: BCDFD8D72E9E682661C626A77217F6D9;3418.
  ) 
 Here is how much of TeX's memory you used:
- 11129 strings out of 480171
- 174755 string characters out of 5894489
- 475664 words of memory out of 5000000
- 28858 multiletter control sequences out of 15000+600000
+ 11206 strings out of 480171
+ 176343 string characters out of 5894489
+ 475187 words of memory out of 5000000
+ 28918 multiletter control sequences out of 15000+600000
  508356 words of font info for 103 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 60i,8n,63p,443b,360s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,8n,63p,442b,408s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (4 pages, 2850909 bytes).
+Output written on main.pdf (6 pages, 4486904 bytes).
 PDF statistics:
- 230 PDF objects out of 1000 (max. 8388607)
- 189 compressed objects within 2 object streams
- 43 named destinations out of 1000 (max. 500000)
- 193 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 272 PDF objects out of 1000 (max. 8388607)
+ 210 compressed objects within 3 object streams
+ 51 named destinations out of 1000 (max. 500000)
+ 246 words of extra memory for PDF output out of 10000 (max. 10000000)
 

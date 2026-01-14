@@ -40,6 +40,20 @@ GPU it took several hours to train the model. Researches from ETH Zürich
 impressive results in quadruped locomotion, including walking on very challenging terrain. 
 A video demonstrating their results can be found at \cite{deep-tracking-control-video}. 
 
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.45\textwidth]{imgs/Jan_RL_scheme.png}
+    \caption{The motion imitation pipeline graphic from Jan Górski's report.}
+    \label{fig:RL-scheme}
+\end{figure}
+
+
+RL approach has the advantage of being able to adapt to a wide range of terrains
+and conditions, as the model can learn to generalize from its training data. 
+What RL enables for researches is to prepare training data using motion capture
+from animals. This way robot can imitate real animal movements.
+
 \subsection{Spline foot trajectory}
 My approach is based on generating smooth foot trajectories using cubic splines.
 This method does not require high computing power nor require training. However,
@@ -49,3 +63,61 @@ in real-time it can achieve similar results to RL approach. Researchers from Bra
 can be effective for controlling quadruped robots, including walking on uneven terrain.
 Great advatange of spline approach is that it is predictable and stable. It is 
 just a math function that could be analyzed and prooved to be stable. 
+
+\subsection{Comparison with RL method}
+As a good metric to compare both methods we used IMU data, to measure robot 
+stability during walking on flat terrain. To do so we recorded Gyroscope
+and Accelerometer data from both robots during walking. Figures~\ref{fig:Spline-robot-IMU-data}
+and ~\ref{fig:RL-robot-IMU-data} shows the recorded data. It is visible
+that in both cases robots achieves similar angular velocities but 
+the accelerometer data shows that spline-based robot has lower
+acceleration spikes. This suggests that the spline-based robot
+is more stable during walking, which is a desirable trait for quadruped locomotion.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.45\textwidth]{imgs/Gyro_Data.png}
+    \includegraphics[width=0.45\textwidth]{imgs/ACC_data.png}
+    \caption{IMU data from Spline Algorithm. Top: Gyroscope data, Bottom: Accelerometer data.}
+    \label{fig:Spline-robot-IMU-data}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.45\textwidth]{imgs/Jan_Gyro.png}
+    \includegraphics[width=0.45\textwidth]{imgs/Jan_ACC.png}
+    \caption{IMU data from RL Algorithm. Top: Gyroscope data, Bottom: Accelerometer data.}
+    \label{fig:RL-robot-IMU-data}
+\end{figure}
+
+Another important test we pergormed was a Fourier Transform analysis of the
+robot's movement during walking. This analysis helps to identify the dominant
+frequencies in the robot's motion, which can provide insights into its stability
+and responsiveness. Figures~\ref{fig:Spline-robot-IMU-FFT-data} and ~\ref{fig:RL-robot-IMU-FFT-data}
+shows the FFT results for both robots. In this case Spline controller shows 
+amplitude spikes at higher frequencies where RL controller has most of the energy
+concentrated at lower frequencies. This suggests that the RL-controlled robot
+has a smoother and more stable gait, as lower frequency movements are generally
+associated with better stability. That could be probably solved by tweeking PID
+parameters of the balancing controller and PD controller for legs. In real life
+application that would be very important as high frequency vibrations could
+damage the robot's hardware over time. 
+
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.45\textwidth]{imgs/Gyro_FFT.png}
+    \includegraphics[width=0.45\textwidth]{imgs/ACC_FFT.png}
+    \caption{IMU Fourier analysis data from Spline Algorithm. 
+    Top: Gyroscope data, Bottom: Accelerometer data.}
+    \label{fig:Spline-robot-IMU-FFT-data}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.45\textwidth]{imgs/Jan_GYRO_FFT.png}
+    \includegraphics[width=0.45\textwidth]{imgs/Jan_ACC_FFT.png}
+    \caption{IMU Fourier analysis data from RL Algorithm. 
+    Top: Gyroscope data, Bottom: Accelerometer data.}
+    \label{fig:RL-robot-IMU-FFT-data}
+\end{figure}
